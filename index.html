@@ -35,7 +35,7 @@
     <section class="flex flex-col justify-center min-h-screen p-4 antialiased text-gray-600 bg-gray-900">
       <div class="h-full">
         <!-- Card -->
-        <div class="max-w-2xl m-5 mx-auto bg-indigo-600 rounded-lg shadow-lg note-card">
+        <div class="max-w-2xl m-5 mx-auto bg-indigo-900 rounded-lg shadow-lg note-card">
           <div class="px-6 py-5">
             <div class="flex items-start">
               <!-- Card content -->
@@ -43,14 +43,33 @@
                 <!-- Card header -->
                 <div class="items-center justify-between w-full mb-3 sm:flex">
                   <!-- Title -->
-                  <h2 id="notes-title" class="mb-1 text-2xl font-extrabold leading-snug truncate text-gray-50 sm:mb-0">Simple Design Tips</h2>
+                  <h2 id="notes-title" class="mb-1 text-2xl font-extrabold leading-snug truncate text-gray-50 sm:mb-0">Create New Repository on Github</h2>
                 </div>
 
                 <!-- Card body -->
                 <div class="flex items-end justify-between whitespace-normal">
                   <!-- Paragraph -->
                   <div class="max-w-md text-indigo-100">
-                    <p class="mb-2">Lorem ipsum dolor sit amet, consecte adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore.</p>
+                    <pre class="mb-2">
+on prohect folder right click and select git bash here
+echo "# repository name" >> README.md
+git init
+git add README.md (optional)
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/iyusrustandi/repository name.git
+git push -u origin main
+
+on github select setting then pages
+build and deployment source select "Deploy from a brand"
+
+branch select main and save
+
+if branch main not visible on build and deployment source select github action and back select deploy from a branch
+
+if the are error on git bash "remote origin already exist" type "git remote remove origin" , check with "git remote -v"
+and start from git init again
+                    </pre>
                   </div>
                 </div>
               </div>
@@ -60,7 +79,7 @@
         <!-- Card end -->
 
         <!-- Card -->
-        <div class="max-w-2xl m-5 mx-auto bg-indigo-600 rounded-lg shadow-lg note-card">
+        <div class="max-w-2xl m-5 mx-auto bg-indigo-900 rounded-lg shadow-lg note-card">
           <div class="px-6 py-5">
             <div class="flex items-start">
               <!-- Card content -->
@@ -68,14 +87,19 @@
                 <!-- Card header -->
                 <div class="items-center justify-between w-full mb-3 sm:flex">
                   <!-- Title -->
-                  <h2 id="notes-title" class="mb-1 text-2xl font-extrabold leading-snug truncate text-gray-50 sm:mb-0">Simple Design Learn</h2>
+                  <h2 id="notes-title" class="mb-1 text-2xl font-extrabold leading-snug truncate text-gray-50 sm:mb-0">Update Repository</h2>
                 </div>
 
                 <!-- Card body -->
                 <div class="flex items-end justify-between whitespace-normal">
                   <!-- Paragraph -->
                   <div class="max-w-md text-indigo-100">
-                    <p class="mb-2">Lorem ipsum dolor sit amet, consecte adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore.</p>
+                    <pre class="mb-2">
+on prohect folder right click and select git bash here
+git remote add origin https://github.com/iyusrustandi/my-notes.git
+git branch -M main
+git push -u origin main
+                    </pre>
                   </div>
                 </div>
               </div>
@@ -85,7 +109,7 @@
         <!-- Card end -->
 
         <!-- Card -->
-        <div class="max-w-2xl m-5 mx-auto bg-indigo-600 rounded-lg shadow-lg note-card">
+        <div class="max-w-2xl m-5 mx-auto bg-indigo-900 rounded-lg shadow-lg note-card">
           <div class="px-6 py-5">
             <div class="flex items-start">
               <!-- Card content -->
@@ -93,39 +117,29 @@
                 <!-- Card header -->
                 <div class="items-center justify-between w-full mb-3 sm:flex">
                   <!-- Title -->
-                  <h2 id="notes-title" class="mb-1 text-2xl font-extrabold leading-snug truncate text-gray-50 sm:mb-0">Simple Design More</h2>
+                  <h2 id="notes-title" class="mb-1 text-2xl font-extrabold leading-snug truncate text-gray-50 sm:mb-0">Clone and edit Repository with VS Code</h2>
                 </div>
 
                 <!-- Card body -->
                 <div class="flex items-end justify-between whitespace-normal">
                   <!-- Paragraph -->
                   <div class="max-w-md text-indigo-100">
-                    <p class="mb-2">Lorem ipsum dolor sit amet, consecte adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Card end -->
+                    <pre class="mb-2">
+- on github repository page click "Code"
+- copy HTTPS url
+- open terminal VS Code
+	- git config --global user.name "iyusrustandi"
+	- git config --global user.email "iyusrustandi2@gmail.com"
+	- git config --global --list
 
-        <!-- Card -->
-        <div class="max-w-2xl m-5 mx-auto bg-indigo-600 rounded-lg shadow-lg note-card">
-          <div class="px-6 py-5">
-            <div class="flex items-start">
-              <!-- Card content -->
-              <div class="flex-grow truncate">
-                <!-- Card header -->
-                <div class="items-center justify-between w-full mb-3 sm:flex">
-                  <!-- Title -->
-                  <h2 id="notes-title" class="mb-1 text-2xl font-extrabold leading-snug truncate text-gray-50 sm:mb-0">Simple Design Next</h2>
-                </div>
-
-                <!-- Card body -->
-                <div class="flex items-end justify-between whitespace-normal">
-                  <!-- Paragraph -->
-                  <div class="max-w-md text-indigo-100">
-                    <p class="mb-2">Lorem ipsum dolor sit amet, consecte adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore.</p>
+- on VS Code welcome page select "Clone Repository"
+- paste link HTTPS url
+- select folder to save repository clone
+- click open
+- to commit change select "Source Control" on sidebar image menu
+- write message and click "Commit"
+- click "Sync Changes"
+                    </pre>
                   </div>
                 </div>
               </div>
