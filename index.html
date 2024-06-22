@@ -5,35 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Notes</title>
     <link href="src/output.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/98d921e819.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <div class="flex flex-col items-center w-full gap-4 pt-4 bg-gradient-to-b from-gray-600 via-gray-300 to-gray-100">
       <form id="search-form" class="max-w-[480px] w-full px-4">
         <div class="relative">
           <input type="text" id="search-input" name="q" class="w-full h-12 p-4 border rounded-full shadow" placeholder="search" />
-          <button type="submit">
-            <svg
-              class="text-gray-400 h-5 w-5 absolute top-3.5 right-3 fill-current"
-              xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink"
-              version="1.1"
-              x="0px"
-              y="0px"
-              viewBox="0 0 56.966 56.966"
-              style="enable-background: new 0 0 56.966 56.966"
-              xml:space="preserve"
-            >
-              <path
-                d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23  s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92  c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17  s-17-7.626-17-17S14.61,6,23.984,6z"
-              />
-            </svg>
+          <button type="submit" class="text-gray-400 h-5 w-5 absolute top-3.5 right-3 fill-current">
+            <i class="fa-solid fa-magnifying-glass"></i>
           </button>
         </div>
       </form>
     </div>
 
     <section class="flex flex-col justify-center min-h-screen p-4 antialiased text-gray-600 bg-gray-900">
-      <div class="h-full">
+      <div class="grid h-full grid-cols-1 gap-5 lg:grid-cols-2">
         <!-- Card -->
         <div class="max-w-2xl m-5 mx-auto bg-indigo-900 rounded-lg shadow-lg note-card">
           <div class="px-6 py-5">
@@ -50,8 +37,9 @@
                 <div class="flex items-end justify-between whitespace-normal">
                   <!-- Paragraph -->
                   <div class="max-w-md text-indigo-100">
-                    <pre class="mb-2">
-on prohect folder right click and select git bash here
+                    <pre
+                      class="mb-2 note-description"
+                      data-full-text='on project folder right click and select git bash here
 echo "# repository name" >> README.md
 git init
 git add README.md (optional)
@@ -68,8 +56,11 @@ branch select main and save
 if branch main not visible on build and deployment source select github action and back select deploy from a branch
 
 if the are error on git bash "remote origin already exist" type "git remote remove origin" , check with "git remote -v"
-and start from git init again
+and start from git init again'
+                    >
+on project folder right click and select git bash here echo "# repository name" >> README.md git init git add README.md (optional) git commit -m "first commit" git branch -M main git remote add origin https://github.com/iyusrustandi/repository name.git git push -u origin main on github select setting then pages build and deployment source select "Deploy from a brand" branch select main and save if branch main not visible on build and deployment source select github action and back select deploy from a branch if the are error on git bash "remote origin already exist" type "git remote remove origin" , check with "git remote -v" and start from git init again...
                     </pre>
+                    <button class="text-indigo-300 underline read-more">Read More</button>
                   </div>
                 </div>
               </div>
@@ -94,12 +85,19 @@ and start from git init again
                 <div class="flex items-end justify-between whitespace-normal">
                   <!-- Paragraph -->
                   <div class="max-w-md text-indigo-100">
-                    <pre class="mb-2">
+                    <pre
+                      class="mb-2 note-description"
+                      data-full-text="on prohect folder right click and select git bash here
+git remote add origin https://github.com/iyusrustandi/my-notes.git
+git branch -M main
+git push -u origin main"
+                    >
 on prohect folder right click and select git bash here
 git remote add origin https://github.com/iyusrustandi/my-notes.git
 git branch -M main
 git push -u origin main
                     </pre>
+                    <button class="text-indigo-300 underline read-more">Read More</button>
                   </div>
                 </div>
               </div>
@@ -124,7 +122,25 @@ git push -u origin main
                 <div class="flex items-end justify-between whitespace-normal">
                   <!-- Paragraph -->
                   <div class="max-w-md text-indigo-100">
-                    <pre class="mb-2">
+                    <pre
+                      class="mb-2 note-description"
+                      data-full-text="Ver 1 
+- on github repository page click Code
+- copy HTTPS url
+- open terminal VS Code
+	- git config --global user.name iyusrustandi
+	- git config --global user.email iyusrustandi2@gmail.com
+	- git config --global --list
+
+  Ver 2
+- on VS Code welcome page select Clone Repository
+- paste link HTTPS url
+- select folder to save repository clone
+- click open
+- to commit change select Source Control on sidebar image menu
+- write message and click Commit
+- click Sync Changes"
+                    >
 - on github repository page click "Code"
 - copy HTTPS url
 - open terminal VS Code
@@ -138,8 +154,86 @@ git push -u origin main
 - click open
 - to commit change select "Source Control" on sidebar image menu
 - write message and click "Commit"
-- click "Sync Changes"
+- click Sync Changes
                     </pre>
+                    <button class="text-indigo-300 underline read-more">Read More</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Card end -->
+
+        <!-- Card -->
+        <div class="max-w-2xl m-5 mx-auto bg-indigo-900 rounded-lg shadow-lg note-card">
+          <div class="px-6 py-5">
+            <div class="flex items-start">
+              <!-- Card content -->
+              <div class="flex-grow truncate">
+                <!-- Card header -->
+                <div class="items-center justify-between w-full mb-3 sm:flex">
+                  <!-- Title -->
+                  <h2 id="notes-title" class="mb-1 text-2xl font-extrabold leading-snug truncate text-gray-50 sm:mb-0">Install tailwind on HTML</h2>
+                </div>
+
+                <!-- Card body -->
+                <div class="flex items-end justify-between whitespace-normal">
+                  <!-- Paragraph -->
+                  <div class="max-w-md text-indigo-100">
+                    <pre
+                      class="mb-2 note-description"
+                      data-full-text="npm install -D tailwindcss
+npx tailwindcss init
+
+tailwind.config.js
+	/** @type {import('tailwindcss').Config} */
+		module.exports = {
+  			darkMode: 'class',
+  			content: ['index.html'],
+  			theme: {
+   			 extend: {},
+ 				 },
+ 			 plugins: [],
+			};
+
+src/input.css
+	@tailwind base;
+	@tailwind components;
+	@tailwind utilities;
+
+when build html 
+npx tailwindcss -i ./src/input.css -o ./src/output.css --watch
+
+HTML head 
+href=src/output.css rel=stylesheet"
+                    >
+npm install -D tailwindcss
+npx tailwindcss init
+
+tailwind.config.js
+	/** @type {import('tailwindcss').Config} */
+		module.exports = {
+  			darkMode: 'class',
+  			content: ['index.html'],
+  			theme: {
+   			 extend: {},
+ 				 },
+ 			 plugins: [],
+			};
+
+src/input.css
+	@tailwind base;
+	@tailwind components;
+	@tailwind utilities;
+
+when build html 
+npx tailwindcss -i ./src/input.css -o ./src/output.css --watch
+
+HTML head 
+href="src/output.css" rel="stylesheet"
+                    </pre>
+                    <button class="text-indigo-300 underline read-more">Read More</button>
                   </div>
                 </div>
               </div>
