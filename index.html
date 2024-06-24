@@ -8,241 +8,250 @@
     <script src="https://kit.fontawesome.com/98d921e819.js" crossorigin="anonymous"></script>
   </head>
   <body>
-    <div class="flex flex-col items-center w-full gap-4 pt-4 bg-gradient-to-b from-gray-600 via-gray-300 to-gray-100">
-      <form id="search-form" class="max-w-[480px] w-full px-4">
-        <div class="relative">
-          <input type="text" id="search-input" name="q" class="w-full h-12 p-4 border rounded-full shadow" placeholder="search" />
-          <button type="submit" class="text-gray-400 h-5 w-5 absolute top-3.5 right-3 fill-current">
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </button>
-        </div>
-      </form>
-    </div>
-
-    <section class="flex flex-col justify-center min-h-screen p-4 antialiased text-gray-600 bg-gray-900">
-      <div class="grid h-full grid-cols-1 gap-5 lg:grid-cols-2">
-        <!-- Card -->
-        <div class="max-w-2xl m-5 mx-auto bg-indigo-900 rounded-lg shadow-lg note-card">
-          <div class="px-6 py-5">
-            <div class="flex items-start">
-              <!-- Card content -->
-              <div class="flex-grow truncate">
-                <!-- Card header -->
-                <div class="items-center justify-between w-full mb-3 sm:flex">
-                  <!-- Title -->
-                  <h2 id="notes-title" class="mb-1 text-2xl font-extrabold leading-snug truncate text-gray-50 sm:mb-0">Create New Repository on Github</h2>
-                </div>
-
-                <!-- Card body -->
-                <div class="flex items-end justify-between whitespace-normal">
-                  <!-- Paragraph -->
-                  <div class="max-w-md text-indigo-100">
-                    <pre
-                      class="mb-2 note-description"
-                      data-full-text='on project folder right click and select git bash here
-echo "# repository name" >> README.md
-git init
-git add README.md (optional)
-git commit -m "first commit"
-git branch -M main
-git remote add origin https://github.com/iyusrustandi/repository name.git
-git push -u origin main
-
-on github select setting then pages
-build and deployment source select "Deploy from a brand"
-
-branch select main and save
-
-if branch main not visible on build and deployment source select github action and back select deploy from a branch
-
-if the are error on git bash "remote origin already exist" type "git remote remove origin" , check with "git remote -v"
-and start from git init again'
-                    >
-on project folder right click and select git bash here echo "# repository name" >> README.md git init git add README.md (optional) git commit -m "first commit" git branch -M main git remote add origin https://github.com/iyusrustandi/repository name.git git push -u origin main on github select setting then pages build and deployment source select "Deploy from a brand" branch select main and save if branch main not visible on build and deployment source select github action and back select deploy from a branch if the are error on git bash "remote origin already exist" type "git remote remove origin" , check with "git remote -v" and start from git init again...
-                    </pre>
-                    <button class="text-indigo-300 underline read-more">Read More</button>
-                  </div>
-                </div>
-              </div>
-            </div>
+    <div class="min-h-screen p-4 antialiased text-gray-600 bg-gray-900">
+      <div class="flex flex-col items-center w-full gap-4 pt-4">
+        <form id="search-form" class="max-w-[480px] w-full px-4">
+          <div class="relative">
+            <input type="text" id="search-input" name="q" class="w-full h-12 p-4 border rounded-full shadow" placeholder="search" />
+            <button type="submit" class="text-gray-400 h-5 w-5 absolute top-3.5 right-3 fill-current">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
           </div>
-        </div>
-        <!-- Card end -->
-
-        <!-- Card -->
-        <div class="max-w-2xl m-5 mx-auto bg-indigo-900 rounded-lg shadow-lg note-card">
-          <div class="px-6 py-5">
-            <div class="flex items-start">
-              <!-- Card content -->
-              <div class="flex-grow truncate">
-                <!-- Card header -->
-                <div class="items-center justify-between w-full mb-3 sm:flex">
-                  <!-- Title -->
-                  <h2 id="notes-title" class="mb-1 text-2xl font-extrabold leading-snug truncate text-gray-50 sm:mb-0">Update Repository</h2>
-                </div>
-
-                <!-- Card body -->
-                <div class="flex items-end justify-between whitespace-normal">
-                  <!-- Paragraph -->
-                  <div class="max-w-md text-indigo-100">
-                    <pre
-                      class="mb-2 note-description"
-                      data-full-text="on prohect folder right click and select git bash here
-git remote add origin https://github.com/iyusrustandi/my-notes.git
-git branch -M main
-git push -u origin main"
-                    >
-on prohect folder right click and select git bash here
-git remote add origin https://github.com/iyusrustandi/my-notes.git
-git branch -M main
-git push -u origin main
-                    </pre>
-                    <button class="text-indigo-300 underline read-more">Read More</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Card end -->
-
-        <!-- Card -->
-        <div class="max-w-2xl m-5 mx-auto bg-indigo-900 rounded-lg shadow-lg note-card">
-          <div class="px-6 py-5">
-            <div class="flex items-start">
-              <!-- Card content -->
-              <div class="flex-grow truncate">
-                <!-- Card header -->
-                <div class="items-center justify-between w-full mb-3 sm:flex">
-                  <!-- Title -->
-                  <h2 id="notes-title" class="mb-1 text-2xl font-extrabold leading-snug truncate text-gray-50 sm:mb-0">Clone and edit Repository with VS Code</h2>
-                </div>
-
-                <!-- Card body -->
-                <div class="flex items-end justify-between whitespace-normal">
-                  <!-- Paragraph -->
-                  <div class="max-w-md text-indigo-100">
-                    <pre
-                      class="mb-2 note-description"
-                      data-full-text="Ver 1 
-- on github repository page click Code
-- copy HTTPS url
-- open terminal VS Code
-	- git config --global user.name iyusrustandi
-	- git config --global user.email iyusrustandi2@gmail.com
-	- git config --global --list
-
-  Ver 2
-- on VS Code welcome page select Clone Repository
-- paste link HTTPS url
-- select folder to save repository clone
-- click open
-- to commit change select Source Control on sidebar image menu
-- write message and click Commit
-- click Sync Changes"
-                    >
-- on github repository page click "Code"
-- copy HTTPS url
-- open terminal VS Code
-	- git config --global user.name "iyusrustandi"
-	- git config --global user.email "iyusrustandi2@gmail.com"
-	- git config --global --list
-
-- on VS Code welcome page select "Clone Repository"
-- paste link HTTPS url
-- select folder to save repository clone
-- click open
-- to commit change select "Source Control" on sidebar image menu
-- write message and click "Commit"
-- click Sync Changes
-                    </pre>
-                    <button class="text-indigo-300 underline read-more">Read More</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Card end -->
-
-        <!-- Card -->
-        <div class="max-w-2xl m-5 mx-auto bg-indigo-900 rounded-lg shadow-lg note-card">
-          <div class="px-6 py-5">
-            <div class="flex items-start">
-              <!-- Card content -->
-              <div class="flex-grow truncate">
-                <!-- Card header -->
-                <div class="items-center justify-between w-full mb-3 sm:flex">
-                  <!-- Title -->
-                  <h2 id="notes-title" class="mb-1 text-2xl font-extrabold leading-snug truncate text-gray-50 sm:mb-0">Install tailwind on HTML</h2>
-                </div>
-
-                <!-- Card body -->
-                <div class="flex items-end justify-between whitespace-normal">
-                  <!-- Paragraph -->
-                  <div class="max-w-md text-indigo-100">
-                    <pre
-                      class="mb-2 note-description"
-                      data-full-text="npm install -D tailwindcss
-npx tailwindcss init
-
-tailwind.config.js
-	/** @type {import('tailwindcss').Config} */
-		module.exports = {
-  			darkMode: 'class',
-  			content: ['index.html'],
-  			theme: {
-   			 extend: {},
- 				 },
- 			 plugins: [],
-			};
-
-src/input.css
-	@tailwind base;
-	@tailwind components;
-	@tailwind utilities;
-
-when build html 
-npx tailwindcss -i ./src/input.css -o ./src/output.css --watch
-
-HTML head 
-href=src/output.css rel=stylesheet"
-                    >
-npm install -D tailwindcss
-npx tailwindcss init
-
-tailwind.config.js
-	/** @type {import('tailwindcss').Config} */
-		module.exports = {
-  			darkMode: 'class',
-  			content: ['index.html'],
-  			theme: {
-   			 extend: {},
- 				 },
- 			 plugins: [],
-			};
-
-src/input.css
-	@tailwind base;
-	@tailwind components;
-	@tailwind utilities;
-
-when build html 
-npx tailwindcss -i ./src/input.css -o ./src/output.css --watch
-
-HTML head 
-href="src/output.css" rel="stylesheet"
-                    </pre>
-                    <button class="text-indigo-300 underline read-more">Read More</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Card end -->
+        </form>
       </div>
-    </section>
+
+      <div class="flex flex-wrap justify-center mt-10">
+        <!-- card 1 -->
+        <div class="max-w-sm p-4 card">
+          <div class="flex items-center justify-start gap-3 overflow-hidden bg-white border border-gray-300 rounded-xl">
+            <div class="flex flex-col gap-2 py-2">
+              <h2 class="text-xl font-bold">Create New Repository on Github</h2>
+              <p id="p1" class="text-gray-500">
+                on project folder right click and select git bash here<br />
+                echo "# repository name" >> README.md<br />
+                git init git add README.md (optional)<br />
+                git commit -m "first commit"<br />
+                git branch -M main<br />
+                git remote add origin https://github.com/iyusrustandi/repository name.git<br />
+                git push -u origin main<br />
+                <br />
+                on github select setting then pages<br />
+                build and deployment source select "Deploy from a branch"<br />
+                branch select main and save<br />
+                <br />
+                if branch main not visible<br />
+                on build and deployment source select github action<br />
+                and back select deploy from a branch<br />
+                if the are error on git bash "remote origin already exist"<br />
+                type "git remote remove origin" ,<br />
+                check with "git remote -v"<br />
+                and start from git init again.<br />
+              </p>
+              <a href="#" data-target="p1" class="inline-flex items-center mt-3 text-blue-600 underline read-more underline-offset-5 dark:text-white hover:text-blue-600">
+                Read More
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                  <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+              </a>
+              <a href="#" data-target="p1" class="inline-flex items-center mt-3 text-blue-600 underline show-less underline-offset-5 dark:text-white hover:text-blue-600" style="display: none">
+                Show Less
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                  <path d="M19 12H5M12 19l-7-7 7-7"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- card 2 -->
+        <div class="max-w-sm p-4 card">
+          <div class="flex items-center justify-start gap-3 overflow-hidden bg-white border border-gray-300 rounded-xl">
+            <div class="flex flex-col gap-2 py-2">
+              <h2 class="text-xl font-bold">Update Repository</h2>
+              <p id="p2" class="text-gray-500">
+                on project folder right click and select git bash here<br />
+                git remote add origin https://github.com/iyusrustandi/my-notes.git<br />
+                git branch -M main<br />
+                git push -u origin main<br />
+              </p>
+              <a href="#" data-target="p2" class="inline-flex items-center mt-3 text-blue-600 underline read-more underline-offset-5 dark:text-white hover:text-blue-600">
+                Read More
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                  <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+              </a>
+              <a href="#" data-target="p2" class="inline-flex items-center mt-3 text-blue-600 underline show-less underline-offset-5 dark:text-white hover:text-blue-600" style="display: none">
+                Show Less
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                  <path d="M19 12H5M12 19l-7-7 7-7"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- card 3 -->
+        <div class="max-w-sm p-4 card">
+          <div class="flex items-center justify-start gap-3 overflow-hidden bg-white border border-gray-300 rounded-xl">
+            <div class="flex flex-col gap-2 py-2">
+              <h2 class="text-xl font-bold">Clone and edit Repository with VS Code</h2>
+              <p id="p3" class="text-gray-500">
+                - on github repository page click "Code"<br />
+                - copy HTTPS url<br />
+                - open terminal VS Code<br />
+                - git config --global user.name "iyusrustandi"<br />
+                - git config --global user.email "iyusrustandi2@gmail.com"<br />
+                - git config --global --list<br />
+                <br />
+                - on VS Code welcome page select "Clone Repository"<br />
+                - paste link HTTPS url<br />
+                - select folder to save repository clone<br />
+                - click open<br />
+                - to commit change select "Source Control" on sidebar image menu<br />
+                - write message and click "Commit"<br />
+                - click Sync Changes<br />
+              </p>
+              <a href="#" data-target="p3" class="inline-flex items-center mt-3 text-blue-600 underline read-more underline-offset-5 dark:text-white hover:text-blue-600">
+                Read More
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                  <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+              </a>
+              <a href="#" data-target="p3" class="inline-flex items-center mt-3 text-blue-600 underline show-less underline-offset-5 dark:text-white hover:text-blue-600" style="display: none">
+                Show Less
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                  <path d="M19 12H5M12 19l-7-7 7-7"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- card 4 -->
+        <div class="max-w-sm p-4 card">
+          <div class="flex items-center justify-start gap-3 overflow-hidden bg-white border border-gray-300 rounded-xl">
+            <div class="flex flex-col gap-2 py-2">
+              <h2 class="text-xl font-bold">Install tailwind on HTML</h2>
+              <p id="p4" class="text-gray-500">
+                npm install -D tailwindcss npx tailwindcss init<br />
+                <br />
+                tailwind.config.js<br />
+                /** @type {import('tailwindcss').Config} */<br />
+                module.exports = {<br />
+                darkMode: 'class',<br />
+                content: ['index.html'],<br />
+                theme: {<br />
+                extend: {},<br />
+                },<br />
+                plugins: [],<br />
+                };<br />
+                <br />
+                src/input.css<br />
+                @tailwind base;<br />
+                @tailwind components;<br />
+                @tailwind utilities;<br />
+                <br />
+                when build html <br />
+                npx tailwindcss -i ./src/input.css -o ./src/output.css --watch<br />
+                <br />
+                HTML head <br />
+                use tag link and href="src/output.css" rel="stylesheet"<br />
+              </p>
+              <a href="#" data-target="p4" class="inline-flex items-center mt-3 text-blue-600 underline read-more underline-offset-5 dark:text-white hover:text-blue-600">
+                Read More
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                  <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+              </a>
+              <a href="#" data-target="p4" class="inline-flex items-center mt-3 text-blue-600 underline show-less underline-offset-5 dark:text-white hover:text-blue-600" style="display: none">
+                Show Less
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                  <path d="M19 12H5M12 19l-7-7 7-7"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- card 5 -->
+        <div class="max-w-sm p-4 card">
+          <div class="flex items-center justify-start gap-3 overflow-hidden bg-white border border-gray-300 rounded-xl">
+            <div class="flex flex-col gap-2 py-2">
+              <h2 class="text-xl font-bold">Tailwind Library</h2>
+              <p id="p5" class="text-gray-500">
+                https://tailwindflex.com/<br />
+                https://readymadeui.com/<br />
+                https://flowbite.com/<br />
+                https://tailwindcomponents.com/<br />
+                https://www.material-tailwind.com/<br />
+                https://tw-elements.com/<br />
+                https://daisyui.com/docs/install/<br />
+              </p>
+              <a href="#" data-target="p5" class="inline-flex items-center mt-3 text-blue-600 underline read-more underline-offset-5 dark:text-white hover:text-blue-600">
+                Read More
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                  <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+              </a>
+              <a href="#" data-target="p5" class="inline-flex items-center mt-3 text-blue-600 underline show-less underline-offset-5 dark:text-white hover:text-blue-600" style="display: none">
+                Show Less
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                  <path d="M19 12H5M12 19l-7-7 7-7"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- card 6 -->
+        <div class="max-w-sm p-4 card">
+          <div class="flex items-center justify-start gap-3 overflow-hidden bg-white border border-gray-300 rounded-xl">
+            <div class="flex flex-col gap-2 py-2">
+              <h2 class="text-xl font-bold">Laravel Library</h2>
+              <p id="p6" class="text-gray-500">
+                https://flowbite.com/<br />
+                https://filamentphp.com/<br />
+                https://adminlte.io/<br />
+              </p>
+              <a href="#" data-target="p6" class="inline-flex items-center mt-3 text-blue-600 underline read-more underline-offset-5 dark:text-white hover:text-blue-600">
+                Read More
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                  <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+              </a>
+              <a href="#" data-target="p6" class="inline-flex items-center mt-3 text-blue-600 underline show-less underline-offset-5 dark:text-white hover:text-blue-600" style="display: none">
+                Show Less
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                  <path d="M19 12H5M12 19l-7-7 7-7"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- card 7 -->
+        <div class="max-w-sm p-4 card">
+          <div class="flex items-center justify-start gap-3 overflow-hidden bg-white border border-gray-300 rounded-xl">
+            <div class="flex flex-col gap-2 py-2">
+              <h2 class="text-xl font-bold">Laravel Auth with Breeze</h2>
+              <p id="p7" class="text-gray-500">Laravel breeze</p>
+              <a href="#" data-target="p7" class="inline-flex items-center mt-3 text-blue-600 underline read-more underline-offset-5 dark:text-white hover:text-blue-600">
+                Read More
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                  <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+              </a>
+              <a href="#" data-target="p7" class="inline-flex items-center mt-3 text-blue-600 underline show-less underline-offset-5 dark:text-white hover:text-blue-600" style="display: none">
+                Show Less
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                  <path d="M19 12H5M12 19l-7-7 7-7"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script src="script.js"></script>
   </body>

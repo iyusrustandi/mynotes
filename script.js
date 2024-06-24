@@ -1,54 +1,58 @@
-document.addEventListener('DOMContentLoaded', function () {
-  const descriptions = document.querySelectorAll('.note-description');
-  const charLimit = 50; // Set your character limit here
+document.addEventListener('DOMContentLoaded', () => {
+  const readMoreLinks = document.querySelectorAll('.read-more');
+  const showLessLinks = document.querySelectorAll('.show-less');
 
-  descriptions.forEach((description) => {
-    const fullText = description.getAttribute('data-full-text');
-    if (fullText.length > charLimit) {
-      description.innerText = fullText.slice(0, charLimit) + '...';
+  function truncateText(element, wordLimit) {
+    const originalText = element.innerHTML;
+    const words = originalText.split(/\s+/);
+    if (words.length > wordLimit) {
+      const truncatedText = words.slice(0, wordLimit).join(' ') + '...';
+      element.dataset.fullText = originalText; // Store the full text
+      element.innerHTML = truncatedText;
     }
+  }
 
-    const readMoreButton = description.nextElementSibling;
-    readMoreButton.addEventListener('click', function () {
-      if (readMoreButton.innerText === 'Read More') {
-        description.innerText = fullText;
-        readMoreButton.innerText = 'Read Less';
-      } else {
-        description.innerText = fullText.slice(0, charLimit) + '...';
-        readMoreButton.innerText = 'Read More';
-      }
+  // Find all <p> elements within the cards and truncate their text
+  const paragraphs = document.querySelectorAll('div.flex.flex-col.gap-2.py-2 > p');
+  paragraphs.forEach((paragraph) => truncateText(paragraph, 20));
+
+  readMoreLinks.forEach((link) => {
+    const targetId = link.getAttribute('data-target');
+    const targetP = document.getElementById(targetId);
+
+    link.addEventListener('click', (event) => {
+      event.preventDefault();
+      targetP.innerHTML = targetP.dataset.fullText; // Restore the full text
+      link.style.display = 'none';
+      document.querySelector(`.show-less[data-target="${targetId}"]`).style.display = 'inline-flex';
     });
   });
 
-  document.getElementById('search-form').addEventListener('submit', function (event) {
-    event.preventDefault();
+  showLessLinks.forEach((link) => {
+    const targetId = link.getAttribute('data-target');
+    const targetP = document.getElementById(targetId);
 
-    const query = document.getElementById('search-input').value.toLowerCase();
-    const cards = document.querySelectorAll('.note-card');
+    link.addEventListener('click', (event) => {
+      event.preventDefault();
+      truncateText(targetP, 20);
+      link.style.display = 'none';
+      document.querySelector(`.read-more[data-target="${targetId}"]`).style.display = 'inline-flex';
+    });
+  });
+
+  const searchInput = document.getElementById('search-input');
+
+  searchInput.addEventListener('input', () => {
+    const searchTerm = searchInput.value.toLowerCase();
+    const cards = document.querySelectorAll('.card');
 
     cards.forEach((card) => {
-      const title = card.querySelector('#notes-title').innerText.toLowerCase();
-      if (title.includes(query)) {
+      const title = card.querySelector('h2').textContent.toLowerCase();
+      if (title.includes(searchTerm)) {
         card.style.display = 'block';
       } else {
         card.style.display = 'none';
       }
     });
-  });
-});
-
-document.getElementById('search-form').addEventListener('submit', function (event) {
-  event.preventDefault(); // Mencegah pengiriman form
-
-  const query = document.getElementById('search-input').value.toLowerCase();
-  const cards = document.querySelectorAll('.note-card');
-
-  cards.forEach((card) => {
-    const title = card.querySelector('#notes-title').innerText.toLowerCase();
-    if (title.includes(query)) {
-      card.style.display = 'block'; // Menampilkan card yang sesuai
-    } else {
-      card.style.display = 'none'; // Menyembunyikan card yang tidak sesuai
-    }
   });
 });
